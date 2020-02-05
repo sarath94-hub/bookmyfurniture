@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]" parallel="tests">
+  <parameter name="browser" value="chrome"/>
+  <test thread-count="2" name="Test(failed)" parallel="tests">
+    <classes>
+      <class name="tests.RegisterTest">
+        <methods>
+          <include name="register"/>
+          <include name="TeardownTest"/>
+          <include name="getResult"/>
+          <include name="setup"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- tests.RegisterTest -->
+      <class name="serviceTests.SignupTest">
+        <methods>
+          <include name="TeardownTest"/>
+          <include name="getResult"/>
+          <include name="signUpUsingService"/>
+          <include name="setup"/>
+          <include name="signInUsingService"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- serviceTests.SignupTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->

@@ -44,18 +44,21 @@ public class DriverInfo {
 		htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "\\extentReport\\extentConfig.xml");
 		extent.attachReporter(htmlReporter);
 	}
-	
+
 	@BeforeTest
 	@Parameters("browser")
 	public void setup(String browser) throws Exception {
 		if (browser.equalsIgnoreCase("firefox")) {
-			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\src\\main\\resources\\drivers\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver",
+					System.getProperty("user.dir") + "\\src\\main\\resources\\drivers\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		} else if (browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\main\\resources\\drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver",
+					System.getProperty("user.dir") + "\\src\\main\\resources\\drivers\\chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("Edge")) {
-			System.setProperty("webdriver.edge.driver", System.getProperty("user.dir") + "\\src\\main\\resources\\drivers\\MicrosoftWebDriver.exe");
+			System.setProperty("webdriver.edge.driver",
+					System.getProperty("user.dir") + "\\src\\main\\resources\\drivers\\MicrosoftWebDriver.exe");
 			driver = new EdgeDriver();
 		} else {
 			throw new Exception("Browser is not correct");
@@ -93,16 +96,16 @@ public class DriverInfo {
 		File finalDestination = new File(destination);
 		try {
 			FileUtils.copyFile(source, finalDestination);
-			test.log(Status.INFO, screenshotName, MediaEntityBuilder.createScreenCaptureFromPath(destination).build());		
+			test.log(Status.INFO, screenshotName, MediaEntityBuilder.createScreenCaptureFromPath(destination).build());
 		} catch (IOException e) {
 			log.info("Capture Failed " + e.getMessage());
-		}				
+		}
 		return destination;
 	}
 
 	@AfterSuite
 	public void TeardownTest() {
-		extent.flush();		
+		extent.flush();
 		driver.quit();
 	}
 

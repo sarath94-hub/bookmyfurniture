@@ -6,7 +6,7 @@
 		<classes>
 			<class name="tests.RegisterTest" />
 			<!-- class name="tests.LoginTest" /> -->
-			<class name="serviceTests.SignupTest" />
+			<!--  class name="serviceTests.SignupTest" /> -->
 		</classes>
 	</test>
 </suite>

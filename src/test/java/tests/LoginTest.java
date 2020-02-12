@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import utils.DriverInfo;
 
-public class LoginTest extends DriverInfo{
+public class LoginTest extends DriverInfo {
 	WebDriver driver;
 	ITestResult result = null;
 	private static final Logger log = Logger.getLogger(LoginTest.class);
@@ -17,9 +17,9 @@ public class LoginTest extends DriverInfo{
 
 	@Test(priority = 0, description = "Login details")
 	public void login() throws Exception {
-		
-		test = extent.createTest("Login Test","Login details");
-		
+
+		test = extent.createTest("Login Test", "Login details");
+
 		lp.clickOnHomeLink();
 		String expectedTitle = "Welcome";
 		Assert.assertTrue(DriverInfo.driver.getTitle().contains(expectedTitle));
@@ -32,10 +32,10 @@ public class LoginTest extends DriverInfo{
 		getScreenshot(DriverInfo.driver, "After clicking signin");
 		log.info("Login successfull");
 	}
-	
-	@Test(enabled = false, priority = 1 , description = "Finding Flights")
+
+	@Test(enabled = false, priority = 1, description = "Finding Flights")
 	public void findFlights() {
-		test = extent.createTest("Login Test","Login details");
+		test = extent.createTest("Login Test", "Login details");
 	}
 
 }

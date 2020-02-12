@@ -11,26 +11,27 @@ import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;
 
 public class BasePage {
-	
+
 	public static final Logger log = Logger.getLogger(BasePage.class);
 	private static long DEFAULT_TIMEOUT = 30;
-	
+
 	/**
 	 * Method for wait
+	 * 
 	 * @param element
 	 */
 	public void waitForElement(WebElement element) {
 		try {
 			WebDriverWait wait = new WebDriverWait(DriverInfo.driver, DEFAULT_TIMEOUT);
 			wait.until(ExpectedConditions.visibilityOf(element));
-			moveToElement(element);
 		} catch (Exception e) {
 			log.info("Element not found");
 		}
 	}
-	
+
 	/**
 	 * Method for clicking on element
+	 * 
 	 * @param element
 	 */
 	public void clickOnElement(WebElement element) {
@@ -41,9 +42,10 @@ public class BasePage {
 			log.info("Click is not working");
 		}
 	}
-	
+
 	/**
 	 * Method for entering text using sendkeys
+	 * 
 	 * @param element
 	 * @param text
 	 */
@@ -51,9 +53,10 @@ public class BasePage {
 		waitForElement(element);
 		element.sendKeys(text);
 	}
-	
+
 	/**
 	 * selecting drop down by VisibleText
+	 * 
 	 * @param element
 	 * @param text
 	 */
@@ -62,9 +65,10 @@ public class BasePage {
 		Select select = new Select(element);
 		select.selectByVisibleText(text);
 	}
-	
+
 	/**
 	 * selectMultipleSelectDropDownByVisibleText
+	 * 
 	 * @param element
 	 * @param text1
 	 * @param text2
@@ -79,37 +83,43 @@ public class BasePage {
 			log.info("Its not a multiple select drop down");
 		}
 	}
-	
+
 	/**
 	 * verifyElementSelected
+	 * 
 	 * @param element
 	 * @return
 	 */
 	public String verifyElementSelected(WebElement element) {
 		String value;
-    	if(element.isSelected()) {
-    		value= element.getAttribute("value");
-    		log.info("Value is " + element.getAttribute("value"));
-    	}else {
-    		value= element.getAttribute("value");
-    		log.info("Value is " + element.getAttribute("value"));
-    	}
+		if (element.isSelected()) {
+			value = element.getAttribute("value");
+			log.info("Value is " + element.getAttribute("value"));
+		} else {
+			value = element.getAttribute("value");
+			log.info("Value is " + element.getAttribute("value"));
+		}
 		return value;
-    }	
-	
+	}
+
 	/**
 	 * moveToElement
+	 * 
 	 * @param element
 	 */
 	public void moveToElement(WebElement element) {
-		waitForElement(element);
-		Actions acs = new Actions(DriverInfo.driver);
-		acs.moveToElement(element);
-		log.info("moved to element");
+		try {
+			waitForElement(element);
+			Actions acs = new Actions(DriverInfo.driver);
+			acs.moveToElement(element);
+			log.info("moved to element");
+		} catch (Exception e) {
+			log.error("Move to element Failed");
+		}
 	}
-	
+
 	/**
-	 * Setting URL and headers for service 
+	 * Setting URL and headers for service
 	 * 
 	 * @param basepath
 	 * @return
@@ -117,7 +127,7 @@ public class BasePage {
 	public static RequestSpecification setBaseURI(String basepath) {
 		RequestSpecification request = RestAssured.given();
 		request.baseUri("http://okmry52647dns.eastus.cloudapp.azure.com:8089/rest/api/");
-		request.header("Content-Type","application/json");
+		request.header("Content-Type", "application/json");
 		request.basePath(basepath);
 		return request;
 	}

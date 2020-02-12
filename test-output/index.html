@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-TestSuite">
-              <span class="suite-name border-failed">TestSuite</span>
+              <span class="suite-name border-passed">TestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -59,7 +59,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-TestSuite">
-                    <span>2 groups</span>
+                    <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,40 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,  1 skipped,  </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-TestSuite" class="hide-methods failed suite-TestSuite"> (hide)</a> <!-- hide-methods failed suite-TestSuite -->
-                      <a href="#" panel-name="suite-TestSuite" class="show-methods failed suite-TestSuite"> (show)</a> <!-- show-methods failed suite-TestSuite -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-TestSuite" class="hide-methods passed suite-TestSuite"> (hide)</a> <!-- hide-methods passed suite-TestSuite -->
+                      <a href="#" panel-name="suite-TestSuite" class="show-methods passed suite-TestSuite"> (show)</a> <!-- show-methods passed suite-TestSuite -->
                     </span>
-                    <div class="method-list-content failed suite-TestSuite">
+                    <div class="method-list-content passed suite-TestSuite">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-TestSuite" title="tests.RegisterTest" hash-for-method="register">register</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestSuite" title="serviceTests.SignupTest" hash-for-method="signUpUsingService">signUpUsingService</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-TestSuite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-TestSuite" class="hide-methods skipped suite-TestSuite"> (hide)</a> <!-- hide-methods skipped suite-TestSuite -->
-                      <a href="#" panel-name="suite-TestSuite" class="show-methods skipped suite-TestSuite"> (show)</a> <!-- show-methods skipped suite-TestSuite -->
-                    </span>
-                    <div class="method-list-content skipped suite-TestSuite">
-                      <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestSuite" title="serviceTests.SignupTest" hash-for-method="signInUsingService">signInUsingService</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-TestSuite -->
+                    </div> <!-- method-list-content passed suite-TestSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -136,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-TestSuite" class="panel TestSuite">
-          <div class="suite-TestSuite-class-failed">
+          <div class="suite-TestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="passed.png"/>
               <span class="class-name">tests.RegisterTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -147,1085 +128,12 @@
                   <a name="register">
                   </a> <!-- register -->
                   <span class="method-name">register</span>
-                  <div class="stack-trace">java.lang.StackOverflowError
-	at java.lang.String.startsWith(Unknown Source)
-	at sun.net.www.protocol.jar.Handler.parseContextSpec(Unknown Source)
-	at sun.net.www.protocol.jar.Handler.parseURL(Unknown Source)
-	at java.net.URL.&lt;init&gt;(Unknown Source)
-	at java.net.URL.&lt;init&gt;(Unknown Source)
-	at sun.misc.URLClassPath$JarLoader.checkResource(Unknown Source)
-	at sun.misc.URLClassPath$JarLoader.getResource(Unknown Source)
-	at sun.misc.URLClassPath.getResource(Unknown Source)
-	at java.net.URLClassLoader$1.run(Unknown Source)
-	at java.net.URLClassLoader$1.run(Unknown Source)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.net.URLClassLoader.findClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.openqa.selenium.support.ui.FluentWait.propagateIfNotIgnored(FluentWait.java:301)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:270)
-	at utils.BasePage.waitForElement(BasePage.java:25)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-	at utils.BasePage.moveToElement(BasePage.java:105)
-	at utils.BasePage.waitForElement(BasePage.java:26)
-
-</div> <!-- stack-trace -->
                   <em>
 (Registering details)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TestSuite-class-failed -->
-          <div class="suite-TestSuite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">serviceTests.SignupTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="signUpUsingService">
-                  </a> <!-- signUpUsingService -->
-                  <span class="method-name">signUpUsingService</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at serviceTests.SignupTest.signUpUsingService(SignupTest.java:13)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 16 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TestSuite-class-failed -->
-          <div class="suite-TestSuite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">serviceTests.SignupTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="signInUsingService">
-                  </a> <!-- signInUsingService -->
-                  <span class="method-name">signInUsingService</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at utils.DriverInfo.getResult(DriverInfo.java:74)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-... Removed 19 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-TestSuite-class-skipped -->
+          </div> <!-- suite-TestSuite-class-passed -->
         </div> <!-- panel TestSuite -->
         <div panel-name="test-xml-TestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -1240,7 +148,6 @@
   &lt;test thread-count=&quot;2&quot; name=&quot;Test&quot; parallel=&quot;tests&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.RegisterTest&quot;/&gt;
-      &lt;class name=&quot;serviceTests.SignupTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- TestSuite --&gt;
@@ -1254,7 +161,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (2 classes)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -1264,22 +171,6 @@
             <span class="header-content">Groups for TestSuite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="test-group">
-              <span class="test-group-name">login</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">signInUsingService</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
-            <div class="test-group">
-              <span class="test-group-name">register</span>
-              <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">signUpUsingService</span>
-                <br/>
-              </div> <!-- method-in-group -->
-            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-TestSuite" class="panel">
@@ -1296,24 +187,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'register')
 data.setCell(0, 2, 'tests.RegisterTest')
-data.setCell(0, 3, 105717);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'signUpUsingService')
-data.setCell(1, 2, 'serviceTests.SignupTest')
-data.setCell(1, 3, 0);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'signInUsingService')
-data.setCell(2, 2, 'serviceTests.SignupTest')
-data.setCell(2, 3, 0);
+data.setCell(0, 3, 2565);
 window.suiteTableData['TestSuite']= { tableData: data, tableDiv: 'times-div-TestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-TestSuite">
               </div> <!-- times-div-TestSuite -->
             </div> <!-- times-div -->
@@ -1328,20 +211,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-TestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">serviceTests.SignupTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">TeardownTest</span>
-                <br/>
-                <span class="ignored-method-name">setup</span>
-                <br/>
-                <span class="ignored-method-name">initialize</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-TestSuite" class="panel">
@@ -1350,13 +222,6 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">serviceTests.SignupTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">signInUsingService</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">tests.RegisterTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">initialize</span>
@@ -1364,39 +229,19 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">setup(chrome)</span>
-                <span class="method-start">219 ms</span>
+                <span class="method-start">187 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">register</span>
-                <span class="method-start">5712 ms</span>
+                <span class="method-start">5007 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=register status=FAILURE method=RegisterTest.register()[pri:0, instance:tests.Regist...)</span>
-                <span class="method-start">111445 ms</span>
+                <span class="method-name">getResult([TestResult name=register status=SUCCESS method=RegisterTest.register()[pri:0, instance:tests.Regist...)</span>
+                <span class="method-start">7574 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">serviceTests.SignupTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">signUpUsingService</span>
-                <span class="method-start">112119 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">getResult([TestResult name=signUpUsingService status=FAILURE method=SignupTest.signUpUsingService()[pri:0, ins...)</span>
-                <span class="method-start">112119 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.RegisterTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">TeardownTest</span>
-                <span class="method-start">112244 ms</span>
+                <span class="method-start">7942 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

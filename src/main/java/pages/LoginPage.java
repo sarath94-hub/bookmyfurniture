@@ -12,9 +12,9 @@ public class LoginPage extends BasePage {
 
 	WebDriver driver;
 
-	   @FindBy(how = How.LINK_TEXT, using = "Home")
-	    WebElement home;
-	   
+	@FindBy(how = How.LINK_TEXT, using = "Home")
+	WebElement home;
+
 	@FindBy(how = How.NAME, using = "userName")
 	WebElement userName;
 
@@ -40,7 +40,7 @@ public class LoginPage extends BasePage {
 	public void clickOnSignInLink() {
 		clickOnElement(signIn);
 	}
-	
+
 	public void clickOnHomeLink() {
 		clickOnElement(home);
 	}

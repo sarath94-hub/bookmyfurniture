@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [BookMyFurniture by groups]">
+  <test thread-count="5" name="GRP-FullServiceScenario(failed)">
+    <groups>
+      <run>
+        <include name="FullServiceScenario"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="serviceTests.SignupTest">
+        <methods>
+          <include name="oAuthTokenService"/>
+          <include name="TeardownTest"/>
+          <include name="setup"/>
+          <include name="signInUsingService"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- serviceTests.SignupTest -->
+      <class name="serviceTests.AddToCartTest">
+        <methods>
+          <include name="searchSofaService"/>
+          <include name="TeardownTest"/>
+          <include name="setup"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- serviceTests.AddToCartTest -->
+    </classes>
+  </test> <!-- GRP-FullServiceScenario(failed) -->
+</suite> <!-- Failed suite [BookMyFurniture by groups] -->

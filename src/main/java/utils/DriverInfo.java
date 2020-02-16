@@ -15,6 +15,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -60,6 +62,12 @@ public class DriverInfo {
 			System.setProperty("webdriver.edge.driver",
 					System.getProperty("user.dir") + "\\src\\main\\resources\\drivers\\MicrosoftWebDriver.exe");
 			driver = new EdgeDriver();
+		}else if (browser.equalsIgnoreCase("IE")) {
+			System.setProperty("webdriver.ie.driver",
+					System.getProperty("user.dir") + "\\src\\main\\resources\\drivers\\IEDriverServer.exe");
+			driver = new InternetExplorerDriver();
+			DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+			capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
 		} else {
 			throw new Exception("Browser is not correct");
 		}

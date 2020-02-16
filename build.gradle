@@ -24,9 +24,18 @@ compile group: 'log4j', name: 'log4j', version: '1.2.17'
 compile group: 'org.apache.commons', name: 'commons-io', version: '1.3.2'
 compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
 compile group: 'io.rest-assured', name: 'rest-assured', version: '3.0.0'
+compile group: 'org.testng', name: 'testng', version: '6.14.3'
 }
 
 test{
 	systemProperty 'browser', System.getProperty('browser')
-	useTestNG()
+	useTestNG(){
+		useDefaultListeners = true
+       suites 'testng.xml'
+       includeGroups 'FullServiceScenario'
+   }
+}
+
+test.testLogging {
+    showStandardStreams = true
 }

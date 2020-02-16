@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestSuite" thread-count="2" parallel="tests">
-	<parameter name="browser" value="chrome" />
-	<test name="test name FIRST">
+	<parameter name="browser" value="IE" />
+	<test name="FirstTest">
 		<groups>
 			<run>
 				<include name="FullServiceScenario" />
@@ -12,7 +12,7 @@
 			<class name="tests.RegisterTest" />
 		</classes>
 	</test>
-	<test name="test name SECOND">
+	<test name="SecondTest">
 		<groups>
 			<run>
 				<include name="FullServiceScenario" />

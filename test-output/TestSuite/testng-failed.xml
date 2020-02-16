@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]" parallel="tests">
-  <parameter name="browser" value="chrome"/>
+  <parameter name="browser" value="IE"/>
   <test thread-count="2" name="test name FIRST(failed)" parallel="tests">
     <groups>
       <run>
@@ -20,22 +20,4 @@
       </class> <!-- tests.RegisterTest -->
     </classes>
   </test> <!-- test name FIRST(failed) -->
-  <test thread-count="2" name="test name SECOND(failed)" parallel="tests">
-    <groups>
-      <run>
-        <include name="FullServiceScenario"/>
-      </run>
-    </groups>
-    <classes>
-      <class name="serviceTests.AddToCartTest">
-        <methods>
-          <include name="addProductToCart"/>
-          <include name="TeardownTest"/>
-          <include name="getResult"/>
-          <include name="setup"/>
-          <include name="initialize"/>
-        </methods>
-      </class> <!-- serviceTests.AddToCartTest -->
-    </classes>
-  </test> <!-- test name SECOND(failed) -->
 </suite> <!-- Failed suite [TestSuite] -->

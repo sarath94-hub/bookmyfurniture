@@ -9,8 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;
-import services.AuthTokenData;
-import services.AuthTokenRequest;
 
 public class BasePage {
 
@@ -144,7 +142,7 @@ public class BasePage {
 			
 		case "signin":
 			request.header("Content-Type", "application/json");
-			request.header("Authorization", AuthTokenData.tokenType + " " + AuthTokenData.accessToken);
+			request.header("Authorization", CommonData.tokenType + " " + CommonData.accessToken);
 			request.basePath(basepath);
 			break;
 		}

@@ -5,20 +5,21 @@ import org.json.simple.JSONObject;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import utils.BasePage;
+import utils.CommonData;
 
 public class AuthTokenRequest extends BasePage{
 	private static RequestSpecification request = null;
 	
 	public static void authTokenRequest() {		
 		request = setBaseURI("oauth/token", "oauth");
-		AuthTokenData.authTokenRequest = constructAuthTokenRequestParams();
+		CommonData.authTokenRequest = constructAuthTokenRequestParams();
 	}
 	
 	public static void authTokenResponse() {
 		
-		log.info("OAuth Token request :" + AuthTokenData.authTokenRequest );
+		log.info("OAuth Token request :" + CommonData.authTokenRequest );
 		Response response = request.when().post();
-		AuthTokenData.authTokenResponse = response;
+		CommonData.authTokenResponse = response;
 		log.info("OAuth Token response :" + response.prettyPrint());
 	}
 	
@@ -33,8 +34,8 @@ public class AuthTokenRequest extends BasePage{
 	}
 	
 	public static void extractTokenDetails() {
-		AuthTokenData.accessToken = AuthTokenData.authTokenResponse.path("access_token");
-		AuthTokenData.tokenType = AuthTokenData.authTokenResponse.path("token_type");
-		log.info(AuthTokenData.tokenType + " " + AuthTokenData.accessToken);
+		CommonData.accessToken = CommonData.authTokenResponse.path("access_token");
+		CommonData.tokenType = CommonData.authTokenResponse.path("token_type");
+		log.info(CommonData.tokenType + " " + CommonData.accessToken);
 	}
 }

@@ -9,15 +9,15 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">TestSuite</th></tr>
-<tr><td><a href="#t0">test name FIRST</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">66</td><td>FullServiceScenario</td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">test name SECOND</a></td><td class="num">4</td><td class="num">0</td><td class="num attn">1</td><td class="num">5,665</td><td>FullServiceScenario</td><td></td></tr>
-<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num attn">2</th><th class="num">5,731</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">test name FIRST</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">110</td><td>FullServiceScenario</td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">test name SECOND</a></td><td class="num">7</td><td class="num">0</td><td class="num attn">1</td><td class="num">7,956</td><td>FullServiceScenario</td><td></td></tr>
+<tr><th>Total</th><th class="num">7</th><th class="num">0</th><th class="num attn">2</th><th class="num">8,066</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">test name FIRST &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">tests.RegisterTest</td><td><a href="#m0">getResult</a></td><td rowspan="1">1581841243394</td><td rowspan="1">1</td></tr><tr><th colspan="4">test name FIRST &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.RegisterTest</td><td><a href="#m1">register</a></td><td rowspan="1">1581841243351</td><td rowspan="1">38</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">test name SECOND &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">serviceTests.AddToCartTest</td><td><a href="#m2">addProductToCart</a></td><td rowspan="1">1581841248218</td><td rowspan="1">53</td></tr><tr><th colspan="4">test name SECOND &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">serviceTests.AddToCartTest</td><td><a href="#m3">getProductDetailsService</a></td><td rowspan="1">1581841247489</td><td rowspan="1">57</td></tr><tr class="passedeven"><td><a href="#m4">oAuthTokenService</a></td><td rowspan="1">1581841243351</td><td rowspan="1">1517</td></tr><tr class="passedeven"><td><a href="#m5">searchSofaService</a></td><td rowspan="1">1581841246487</td><td rowspan="1">348</td></tr><tr class="passedeven"><td><a href="#m6">signInUsingService</a></td><td rowspan="1">1581841245587</td><td rowspan="1">212</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">test name FIRST &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">tests.RegisterTest</td><td><a href="#m0">getResult</a></td><td rowspan="1">1581850787851</td><td rowspan="1">0</td></tr><tr><th colspan="4">test name FIRST &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.RegisterTest</td><td><a href="#m1">register</a></td><td rowspan="1">1581850787759</td><td rowspan="1">92</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">test name SECOND &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">serviceTests.AddToCartTest</td><td><a href="#m2">addProductToCart</a></td><td rowspan="1">1581850792821</td><td rowspan="1">47</td></tr><tr><th colspan="4">test name SECOND &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">serviceTests.AddToCartTest</td><td><a href="#m3">deleteFromCart</a></td><td rowspan="1">1581850794984</td><td rowspan="1">47</td></tr><tr class="passedeven"><td><a href="#m4">getProductDetailsService</a></td><td rowspan="1">1581850792109</td><td rowspan="1">47</td></tr><tr class="passedeven"><td><a href="#m5">oAuthTokenService</a></td><td rowspan="1">1581850787760</td><td rowspan="1">1640</td></tr><tr class="passedeven"><td><a href="#m6">reviewCart</a></td><td rowspan="1">1581850793512</td><td rowspan="1">62</td></tr><tr class="passedeven"><td><a href="#m7">searchSofaService</a></td><td rowspan="1">1581850791050</td><td rowspan="1">385</td></tr><tr class="passedeven"><td><a href="#m8">signInUsingService</a></td><td rowspan="1">1581850790153</td><td rowspan="1">209</td></tr><tr class="passedeven"><td><a href="#m9">updateCart</a></td><td rowspan="1">1581850794262</td><td rowspan="1">50</td></tr></tbody>
 </table>
 <h2>test name FIRST</h2><h3 id="m0">tests.RegisterTest#getResult</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name=register status=FAILURE method=RegisterTest.register()[pri:0, instance:tests.RegisterTest@6e0e048a] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
-	at utils.DriverInfo.getResult(DriverInfo.java:82)
+	at utils.DriverInfo.getResult(DriverInfo.java:77)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
@@ -31,16 +31,19 @@
 	at java.lang.Thread.run(Unknown Source)
 ... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h2>test name SECOND</h2><h3 id="m2">serviceTests.AddToCartTest#addProductToCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [201] but found [409]
-	at services.cart.AddToCartRequest.verifyaddToCartResponseStatusCode(AddToCartRequest.java:35)
-	at serviceTests.AddToCartTest.addProductToCart(AddToCartTest.java:68)
+	at services.cart.AddToCartRequest.verifyaddToCartResponseStatusCode(AddToCartRequest.java:33)
+	at serviceTests.AddToCartTest.addProductToCart(AddToCartTest.java:67)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 ... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">serviceTests.AddToCartTest#getProductDetailsService</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">serviceTests.AddToCartTest#oAuthTokenService</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">serviceTests.AddToCartTest#searchSofaService</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">serviceTests.AddToCartTest#signInUsingService</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">serviceTests.AddToCartTest#deleteFromCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">serviceTests.AddToCartTest#getProductDetailsService</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">serviceTests.AddToCartTest#oAuthTokenService</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">serviceTests.AddToCartTest#reviewCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">serviceTests.AddToCartTest#searchSofaService</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">serviceTests.AddToCartTest#signInUsingService</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">serviceTests.AddToCartTest#updateCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

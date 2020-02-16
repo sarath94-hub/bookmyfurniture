@@ -2,16 +2,15 @@ package serviceTests;
 
 import org.testng.annotations.Test;
 
-import services.AuthTokenData;
 import services.AuthTokenRequest;
-import services.SignInData;
 import services.SignInRequest;
-import services.cart.AddToCartData;
 import services.cart.AddToCartRequest;
-import services.product.ProductData;
+import services.cart.DeleteFromCartRequest;
+import services.cart.ReviewCartRequest;
+import services.cart.UpdateQuantityInCart;
 import services.product.ProductRequest;
-import services.search.SearchData;
 import services.search.SearchRequest;
+import utils.CommonData;
 import utils.DriverInfo;
 
 public class AddToCartTest extends DriverInfo{
@@ -20,9 +19,9 @@ public class AddToCartTest extends DriverInfo{
 	public void oAuthTokenService() throws Exception {
 		test = extent.createTest("Oauth Token", "Token");
 		AuthTokenRequest.authTokenRequest();
-		appendReqAndResToExtentReport("OAuth Request  " + AuthTokenData.authTokenRequest.toJSONString());
+		appendReqAndResToExtentReport("OAuth Request  " + CommonData.authTokenRequest.toJSONString());
 		AuthTokenRequest.authTokenResponse();
-		appendReqAndResToExtentReport("OAuth Response  " + AuthTokenData.authTokenResponse.prettyPrint());
+		appendReqAndResToExtentReport("OAuth Response  " + CommonData.authTokenResponse.prettyPrint());
 		AuthTokenRequest.extractTokenDetails();
 	}
 
@@ -30,9 +29,9 @@ public class AddToCartTest extends DriverInfo{
 	public void signInUsingService() throws Exception {
 		test = extent.createTest("SignIn Test", "Login");
 		SignInRequest.signinRequest();
-		appendReqAndResToExtentReport("SignIn Request  " + SignInData.signinRequest.toJSONString());
+		appendReqAndResToExtentReport("SignIn Request  " + CommonData.signinRequest.toJSONString());
 		SignInRequest.signinResponse();
-		appendReqAndResToExtentReport("SignIn Response  " + SignInData.signinResponse.prettyPrint());
+		appendReqAndResToExtentReport("SignIn Response  " + CommonData.signinResponse.prettyPrint());
 		SignInRequest.verifySigninResponse();
 	}
 	
@@ -40,9 +39,9 @@ public class AddToCartTest extends DriverInfo{
 	public void searchSofaService() throws Exception {
 		test = extent.createTest("Search Sofa", "Search");
 		SearchRequest.searchRequest();
-		appendReqAndResToExtentReport("Search Request  " + SearchData.searchRequest.toJSONString());
+		appendReqAndResToExtentReport("Search Request  " + CommonData.searchRequest.toJSONString());
 		SearchRequest.searchResponse();
-		appendReqAndResToExtentReport("Search Response  " + SearchData.searchResponse.prettyPrint());
+		appendReqAndResToExtentReport("Search Response  " + CommonData.searchResponse.prettyPrint());
 		SearchRequest.verifySearchResponse();
 		SearchRequest.extractPidFromSearchResponse();
 	}
@@ -51,9 +50,9 @@ public class AddToCartTest extends DriverInfo{
 	public void getProductDetailsService() throws Exception {
 		test = extent.createTest("Get product details", "Product details");
 		ProductRequest.productRequest();
-		appendReqAndResToExtentReport("Product Request  " + ProductData.productRequest.toJSONString());
+		appendReqAndResToExtentReport("Product Request  " + CommonData.productRequest.toJSONString());
 		ProductRequest.productResponse();
-		appendReqAndResToExtentReport("Product Response  " + ProductData.productResponse.prettyPrint());
+		appendReqAndResToExtentReport("Product Response  " + CommonData.productResponse.prettyPrint());
 		ProductRequest.verifyProductResponse();
 		ProductRequest.extractProductDetails();
 	}
@@ -62,9 +61,40 @@ public class AddToCartTest extends DriverInfo{
 	public void addProductToCart() throws Exception {
 		test = extent.createTest("Add product to cart", "Adding product to cart");
 		AddToCartRequest.addToCartRequest();
-		appendReqAndResToExtentReport("Add to Cart Request  " + AddToCartData.addToCartRequest.toJSONString());
+		appendReqAndResToExtentReport("Add to Cart Request  " + CommonData.addToCartRequest.toJSONString());
 		AddToCartRequest.addToCartResponse();
-		appendReqAndResToExtentReport("Add to Cart Response  " + AddToCartData.addToCartResponse.prettyPrint());
+		appendReqAndResToExtentReport("Add to Cart Response  " + CommonData.addToCartResponse.prettyPrint());
 		AddToCartRequest.verifyaddToCartResponseStatusCode();
+	}
+	
+	@Test(priority=5, groups = { "FullServiceScenario" })
+	public void reviewCart() throws Exception {
+		test = extent.createTest("Review cart", "review cart");
+		ReviewCartRequest.reviewCartRequest();
+		appendReqAndResToExtentReport("Review cart Request  " + CommonData.reviewCartRequest.toJSONString());
+		ReviewCartRequest.reviewCartResponse();
+		appendReqAndResToExtentReport("Review cart Response  " + CommonData.reviewCartResponse.prettyPrint());
+		ReviewCartRequest.verifyReviewCartResponseStatusCode();
+		ReviewCartRequest.extractCartIdDetails();
+	}
+	
+	@Test(priority=6, groups = { "FullServiceScenario" })
+	public void updateCart() throws Exception {
+		test = extent.createTest("Update cart", "update cart");
+		UpdateQuantityInCart.updateQuantityInCartRequest();
+		appendReqAndResToExtentReport("update cart Request  " + CommonData.updateCartRequest.toJSONString());
+		UpdateQuantityInCart.updateCartResponse();
+		appendReqAndResToExtentReport("update cart Response  " + CommonData.updateCartResponse.prettyPrint());
+		UpdateQuantityInCart.verifyUpdateCartResponseStatusCode();
+	}
+	
+	@Test(priority=7, groups = { "FullServiceScenario" })
+	public void deleteFromCart() throws Exception {
+		test = extent.createTest("Delete product cart", "Delete product cart");
+		DeleteFromCartRequest.deleteFromCartRequest();
+		appendReqAndResToExtentReport("Delete product Request  " + CommonData.deleteFromCartRequest.toJSONString());
+		DeleteFromCartRequest.deleteFromCartResponse();
+		appendReqAndResToExtentReport("Delete product Response  " + CommonData.deleteFromCartResponse.prettyPrint());
+		DeleteFromCartRequest.verifyDeleteFromcartResponseStatusCode();
 	}
 }

@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" ignored="0" total="6" passed="4">
+<testng-results skipped="0" failed="2" ignored="0" total="9" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="TestSuite" duration-ms="5665" started-at="2020-02-16T08:20:43Z" finished-at="2020-02-16T08:20:48Z">
+  <suite name="TestSuite" duration-ms="7956" started-at="2020-02-16T10:59:47Z" finished-at="2020-02-16T10:59:55Z">
     <groups>
       <group name="FullServiceScenario">
         <method signature="RegisterTest.register()[pri:0, instance:tests.RegisterTest@6e0e048a]" name="register" class="tests.RegisterTest"/>
-        <method signature="AddToCartTest.addProductToCart()[pri:4, instance:serviceTests.AddToCartTest@5e853265]" name="addProductToCart" class="serviceTests.AddToCartTest"/>
-        <method signature="AddToCartTest.getProductDetailsService()[pri:3, instance:serviceTests.AddToCartTest@5e853265]" name="getProductDetailsService" class="serviceTests.AddToCartTest"/>
-        <method signature="AddToCartTest.oAuthTokenService()[pri:0, instance:serviceTests.AddToCartTest@5e853265]" name="oAuthTokenService" class="serviceTests.AddToCartTest"/>
-        <method signature="AddToCartTest.searchSofaService()[pri:2, instance:serviceTests.AddToCartTest@5e853265]" name="searchSofaService" class="serviceTests.AddToCartTest"/>
-        <method signature="AddToCartTest.signInUsingService()[pri:1, instance:serviceTests.AddToCartTest@5e853265]" name="signInUsingService" class="serviceTests.AddToCartTest"/>
+        <method signature="AddToCartTest.addProductToCart()[pri:4, instance:serviceTests.AddToCartTest@67205a84]" name="addProductToCart" class="serviceTests.AddToCartTest"/>
+        <method signature="AddToCartTest.deleteFromCart()[pri:7, instance:serviceTests.AddToCartTest@67205a84]" name="deleteFromCart" class="serviceTests.AddToCartTest"/>
+        <method signature="AddToCartTest.getProductDetailsService()[pri:3, instance:serviceTests.AddToCartTest@67205a84]" name="getProductDetailsService" class="serviceTests.AddToCartTest"/>
+        <method signature="AddToCartTest.oAuthTokenService()[pri:0, instance:serviceTests.AddToCartTest@67205a84]" name="oAuthTokenService" class="serviceTests.AddToCartTest"/>
+        <method signature="AddToCartTest.reviewCart()[pri:5, instance:serviceTests.AddToCartTest@67205a84]" name="reviewCart" class="serviceTests.AddToCartTest"/>
+        <method signature="AddToCartTest.searchSofaService()[pri:2, instance:serviceTests.AddToCartTest@67205a84]" name="searchSofaService" class="serviceTests.AddToCartTest"/>
+        <method signature="AddToCartTest.signInUsingService()[pri:1, instance:serviceTests.AddToCartTest@67205a84]" name="signInUsingService" class="serviceTests.AddToCartTest"/>
+        <method signature="AddToCartTest.updateCart()[pri:6, instance:serviceTests.AddToCartTest@67205a84]" name="updateCart" class="serviceTests.AddToCartTest"/>
       </group> <!-- FullServiceScenario -->
     </groups>
-    <test name="test name FIRST" duration-ms="66" started-at="2020-02-16T08:20:43Z" finished-at="2020-02-16T08:20:43Z">
+    <test name="test name FIRST" duration-ms="110" started-at="2020-02-16T10:59:47Z" finished-at="2020-02-16T10:59:47Z">
       <class name="tests.RegisterTest">
-        <test-method status="FAIL" signature="register()[pri:0, instance:tests.RegisterTest@6e0e048a]" name="register" duration-ms="38" started-at="2020-02-16T08:20:43Z" description="Registering details" finished-at="2020-02-16T08:20:43Z">
+        <test-method status="FAIL" signature="register()[pri:0, instance:tests.RegisterTest@6e0e048a]" name="register" duration-ms="92" started-at="2020-02-16T10:59:47Z" description="Registering details" finished-at="2020-02-16T10:59:47Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -46,7 +49,7 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- register -->
-        <test-method status="FAIL" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.RegisterTest@6e0e048a]" name="getResult" is-config="true" duration-ms="1" started-at="2020-02-16T08:20:43Z" finished-at="2020-02-16T08:20:43Z">
+        <test-method status="FAIL" signature="getResult(org.testng.ITestResult)[pri:0, instance:tests.RegisterTest@6e0e048a]" name="getResult" is-config="true" duration-ms="0" started-at="2020-02-16T10:59:47Z" finished-at="2020-02-16T10:59:47Z">
           <params>
             <param index="0">
               <value>
@@ -57,7 +60,7 @@ at java.lang.Thread.run(Unknown Source)
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at utils.DriverInfo.getResult(DriverInfo.java:82)
+at utils.DriverInfo.getResult(DriverInfo.java:77)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -89,13 +92,13 @@ at java.lang.Thread.run(Unknown Source)
         </test-method> <!-- getResult -->
       </class> <!-- tests.RegisterTest -->
     </test> <!-- test name FIRST -->
-    <test name="test name SECOND" duration-ms="5665" started-at="2020-02-16T08:20:43Z" finished-at="2020-02-16T08:20:48Z">
+    <test name="test name SECOND" duration-ms="7956" started-at="2020-02-16T10:59:47Z" finished-at="2020-02-16T10:59:55Z">
       <class name="serviceTests.AddToCartTest">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:serviceTests.AddToCartTest@5e853265]" name="initialize" is-config="true" duration-ms="195" started-at="2020-02-16T08:20:38Z" finished-at="2020-02-16T08:20:38Z">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:serviceTests.AddToCartTest@67205a84]" name="initialize" is-config="true" duration-ms="188" started-at="2020-02-16T10:59:40Z" finished-at="2020-02-16T10:59:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:serviceTests.AddToCartTest@5e853265]" name="setup" is-config="true" duration-ms="5066" started-at="2020-02-16T08:20:38Z" finished-at="2020-02-16T08:20:43Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:serviceTests.AddToCartTest@67205a84]" name="setup" is-config="true" duration-ms="7304" started-at="2020-02-16T10:59:40Z" finished-at="2020-02-16T10:59:47Z">
           <params>
             <param index="0">
               <value>
@@ -106,67 +109,67 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="oAuthTokenService()[pri:0, instance:serviceTests.AddToCartTest@5e853265]" name="oAuthTokenService" duration-ms="1517" started-at="2020-02-16T08:20:43Z" finished-at="2020-02-16T08:20:44Z">
+        <test-method status="PASS" signature="oAuthTokenService()[pri:0, instance:serviceTests.AddToCartTest@67205a84]" name="oAuthTokenService" duration-ms="1640" started-at="2020-02-16T10:59:47Z" finished-at="2020-02-16T10:59:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- oAuthTokenService -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:serviceTests.AddToCartTest@5e853265]" name="getResult" is-config="true" duration-ms="717" started-at="2020-02-16T08:20:44Z" finished-at="2020-02-16T08:20:45Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:serviceTests.AddToCartTest@67205a84]" name="getResult" is-config="true" duration-ms="753" started-at="2020-02-16T10:59:49Z" finished-at="2020-02-16T10:59:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=oAuthTokenService status=SUCCESS method=AddToCartTest.oAuthTokenService()[pri:0, instance:serviceTests.AddToCartTest@5e853265] output={null}]]]>
+                <![CDATA[[TestResult name=oAuthTokenService status=SUCCESS method=AddToCartTest.oAuthTokenService()[pri:0, instance:serviceTests.AddToCartTest@67205a84] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="signInUsingService()[pri:1, instance:serviceTests.AddToCartTest@5e853265]" name="signInUsingService" duration-ms="212" started-at="2020-02-16T08:20:45Z" finished-at="2020-02-16T08:20:45Z">
+        <test-method status="PASS" signature="signInUsingService()[pri:1, instance:serviceTests.AddToCartTest@67205a84]" name="signInUsingService" duration-ms="209" started-at="2020-02-16T10:59:50Z" finished-at="2020-02-16T10:59:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signInUsingService -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:serviceTests.AddToCartTest@5e853265]" name="getResult" is-config="true" duration-ms="685" started-at="2020-02-16T08:20:45Z" finished-at="2020-02-16T08:20:46Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:serviceTests.AddToCartTest@67205a84]" name="getResult" is-config="true" duration-ms="672" started-at="2020-02-16T10:59:50Z" finished-at="2020-02-16T10:59:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=signInUsingService status=SUCCESS method=AddToCartTest.signInUsingService()[pri:1, instance:serviceTests.AddToCartTest@5e853265] output={null}]]]>
+                <![CDATA[[TestResult name=signInUsingService status=SUCCESS method=AddToCartTest.signInUsingService()[pri:1, instance:serviceTests.AddToCartTest@67205a84] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="searchSofaService()[pri:2, instance:serviceTests.AddToCartTest@5e853265]" name="searchSofaService" duration-ms="348" started-at="2020-02-16T08:20:46Z" finished-at="2020-02-16T08:20:46Z">
+        <test-method status="PASS" signature="searchSofaService()[pri:2, instance:serviceTests.AddToCartTest@67205a84]" name="searchSofaService" duration-ms="385" started-at="2020-02-16T10:59:51Z" finished-at="2020-02-16T10:59:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchSofaService -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:serviceTests.AddToCartTest@5e853265]" name="getResult" is-config="true" duration-ms="653" started-at="2020-02-16T08:20:46Z" finished-at="2020-02-16T08:20:47Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:serviceTests.AddToCartTest@67205a84]" name="getResult" is-config="true" duration-ms="674" started-at="2020-02-16T10:59:51Z" finished-at="2020-02-16T10:59:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=searchSofaService status=SUCCESS method=AddToCartTest.searchSofaService()[pri:2, instance:serviceTests.AddToCartTest@5e853265] output={null}]]]>
+                <![CDATA[[TestResult name=searchSofaService status=SUCCESS method=AddToCartTest.searchSofaService()[pri:2, instance:serviceTests.AddToCartTest@67205a84] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="getProductDetailsService()[pri:3, instance:serviceTests.AddToCartTest@5e853265]" name="getProductDetailsService" duration-ms="57" started-at="2020-02-16T08:20:47Z" finished-at="2020-02-16T08:20:47Z">
+        <test-method status="PASS" signature="getProductDetailsService()[pri:3, instance:serviceTests.AddToCartTest@67205a84]" name="getProductDetailsService" duration-ms="47" started-at="2020-02-16T10:59:52Z" finished-at="2020-02-16T10:59:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getProductDetailsService -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:serviceTests.AddToCartTest@5e853265]" name="getResult" is-config="true" duration-ms="670" started-at="2020-02-16T08:20:47Z" finished-at="2020-02-16T08:20:48Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:serviceTests.AddToCartTest@67205a84]" name="getResult" is-config="true" duration-ms="665" started-at="2020-02-16T10:59:52Z" finished-at="2020-02-16T10:59:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=getProductDetailsService status=SUCCESS method=AddToCartTest.getProductDetailsService()[pri:3, instance:serviceTests.AddToCartTest@5e853265] output={null}]]]>
+                <![CDATA[[TestResult name=getProductDetailsService status=SUCCESS method=AddToCartTest.getProductDetailsService()[pri:3, instance:serviceTests.AddToCartTest@67205a84] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="FAIL" signature="addProductToCart()[pri:4, instance:serviceTests.AddToCartTest@5e853265]" name="addProductToCart" duration-ms="53" started-at="2020-02-16T08:20:48Z" finished-at="2020-02-16T08:20:48Z">
+        <test-method status="FAIL" signature="addProductToCart()[pri:4, instance:serviceTests.AddToCartTest@67205a84]" name="addProductToCart" duration-ms="47" started-at="2020-02-16T10:59:52Z" finished-at="2020-02-16T10:59:52Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [201] but found [409]]]>
@@ -179,8 +182,8 @@ at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:652)
 at org.testng.Assert.assertEquals(Assert.java:662)
-at services.cart.AddToCartRequest.verifyaddToCartResponseStatusCode(AddToCartRequest.java:35)
-at serviceTests.AddToCartTest.addProductToCart(AddToCartTest.java:68)
+at services.cart.AddToCartRequest.verifyaddToCartResponseStatusCode(AddToCartRequest.java:33)
+at serviceTests.AddToCartTest.addProductToCart(AddToCartTest.java:67)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -207,18 +210,63 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductToCart -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:serviceTests.AddToCartTest@5e853265]" name="getResult" is-config="true" duration-ms="726" started-at="2020-02-16T08:20:48Z" finished-at="2020-02-16T08:20:48Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:serviceTests.AddToCartTest@67205a84]" name="getResult" is-config="true" duration-ms="644" started-at="2020-02-16T10:59:52Z" finished-at="2020-02-16T10:59:53Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addProductToCart status=FAILURE method=AddToCartTest.addProductToCart()[pri:4, instance:serviceTests.AddToCartTest@5e853265] output={null}]]]>
+                <![CDATA[[TestResult name=addProductToCart status=FAILURE method=AddToCartTest.addProductToCart()[pri:4, instance:serviceTests.AddToCartTest@67205a84] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="TeardownTest()[pri:0, instance:serviceTests.AddToCartTest@5e853265]" name="TeardownTest" is-config="true" duration-ms="1577" started-at="2020-02-16T08:20:49Z" finished-at="2020-02-16T08:20:50Z">
+        <test-method status="PASS" signature="reviewCart()[pri:5, instance:serviceTests.AddToCartTest@67205a84]" name="reviewCart" duration-ms="62" started-at="2020-02-16T10:59:53Z" finished-at="2020-02-16T10:59:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reviewCart -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:serviceTests.AddToCartTest@67205a84]" name="getResult" is-config="true" duration-ms="688" started-at="2020-02-16T10:59:53Z" finished-at="2020-02-16T10:59:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=reviewCart status=SUCCESS method=AddToCartTest.reviewCart()[pri:5, instance:serviceTests.AddToCartTest@67205a84] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="updateCart()[pri:6, instance:serviceTests.AddToCartTest@67205a84]" name="updateCart" duration-ms="50" started-at="2020-02-16T10:59:54Z" finished-at="2020-02-16T10:59:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateCart -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:serviceTests.AddToCartTest@67205a84]" name="getResult" is-config="true" duration-ms="657" started-at="2020-02-16T10:59:54Z" finished-at="2020-02-16T10:59:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=updateCart status=SUCCESS method=AddToCartTest.updateCart()[pri:6, instance:serviceTests.AddToCartTest@67205a84] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="deleteFromCart()[pri:7, instance:serviceTests.AddToCartTest@67205a84]" name="deleteFromCart" duration-ms="47" started-at="2020-02-16T10:59:54Z" finished-at="2020-02-16T10:59:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteFromCart -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:serviceTests.AddToCartTest@67205a84]" name="getResult" is-config="true" duration-ms="666" started-at="2020-02-16T10:59:55Z" finished-at="2020-02-16T10:59:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=deleteFromCart status=SUCCESS method=AddToCartTest.deleteFromCart()[pri:7, instance:serviceTests.AddToCartTest@67205a84] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="TeardownTest()[pri:0, instance:serviceTests.AddToCartTest@67205a84]" name="TeardownTest" is-config="true" duration-ms="1065" started-at="2020-02-16T10:59:55Z" finished-at="2020-02-16T10:59:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TeardownTest -->

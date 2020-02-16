@@ -6,6 +6,7 @@ import org.testng.Assert;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import utils.BasePage;
+import utils.CommonData;
 
 public class SignUpRequest extends BasePage{
 
@@ -13,14 +14,14 @@ public class SignUpRequest extends BasePage{
 	
 	public static void signupRequest() {		
 		request = setBaseURI("rest/api/signup/", "base");
-		SignUpData.signupRequest = constructSignUpRequestParamas();
+		CommonData.signupRequest = constructSignUpRequestParamas();
 	}
 	
 	public static void signupResponse() {
-		request.body(SignUpData.signupRequest);
-		log.info("Signup request :" + SignUpData.signupRequest);
+		request.body(CommonData.signupRequest);
+		log.info("Signup request :" + CommonData.signupRequest);
 		Response response = request.when().post();
-		SignUpData.signupResponse = response;
+		CommonData.signupResponse = response;
 		log.info("Signup response :" + response.prettyPrint());
 	}
 	
@@ -35,7 +36,7 @@ public class SignUpRequest extends BasePage{
 	}
 	
 	public static void verifySignUpResponse() {
-		int statusCode= SignUpData.signupResponse.path("httpStatusCode");
+		int statusCode= CommonData.signupResponse.path("httpStatusCode");
 		Assert.assertEquals(statusCode, 200);
 	}
 }

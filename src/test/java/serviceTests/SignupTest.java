@@ -2,10 +2,6 @@ package serviceTests;
 
 import org.testng.annotations.Test;
 
-import services.AuthTokenData;
-import services.AuthTokenRequest;
-import services.SignInData;
-import services.SignInRequest;
 import services.SignUpRequest;
 import utils.DriverInfo;
 

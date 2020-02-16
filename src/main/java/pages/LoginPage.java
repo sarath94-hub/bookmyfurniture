@@ -12,16 +12,16 @@ public class LoginPage extends BasePage {
 
 	WebDriver driver;
 
-	@FindBy(how = How.LINK_TEXT, using = "Home")
-	WebElement home;
+	@FindBy(how = How.CSS, using = "div.login-main > p-sidebar > div> span > button")
+	WebElement closeBtnRegisterPopup;
 
-	@FindBy(how = How.NAME, using = "userName")
-	WebElement userName;
+	@FindBy(how = How.CSS, using = "div.login-main > div >div > div>form>div> input")
+	WebElement emailId;
 
-	@FindBy(how = How.NAME, using = "password")
-	WebElement password;
+	@FindBy(how = How.CSS, using = "div.login-main > div >div > div>form>div:nth-child(2)> div >input")
+	WebElement pwd;
 
-	@FindBy(how = How.NAME, using = "login")
+	@FindBy(how = How.CSS, using = "div.login-main > div >div > div>form>div:nth-child(3)> div >button.btn-primary")
 	WebElement signIn;
 
 	public LoginPage(WebDriver driver) {
@@ -29,20 +29,20 @@ public class LoginPage extends BasePage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void setUserName(String strUserName) {
-		sendText(userName, strUserName);
+	public void setEmailId(String strEmail) {
+		sendText(emailId, strEmail);
 	}
 
-	public void setPwd(String pwd) {
-		sendText(password, pwd);
+	public void setPwd(String passwd) {
+		sendText(pwd, passwd);
 	}
 
 	public void clickOnSignInLink() {
 		clickOnElement(signIn);
 	}
 
-	public void clickOnHomeLink() {
-		clickOnElement(home);
+	public void clickOnCloseBtnRegisterPopup() {
+		clickOnElement(closeBtnRegisterPopup);
 	}
 
 }

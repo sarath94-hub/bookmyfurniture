@@ -9,10 +9,38 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">TestSuite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">7,720</td><td></td><td></td></tr>
+<tr><td><a href="#t0">test name FIRST</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">66</td><td>FullServiceScenario</td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">test name SECOND</a></td><td class="num">4</td><td class="num">0</td><td class="num attn">1</td><td class="num">5,665</td><td>FullServiceScenario</td><td></td></tr>
+<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num attn">2</th><th class="num">5,731</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.RegisterTest</td><td><a href="#m0">register</a></td><td rowspan="1">1581435779104</td><td rowspan="1">2565</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">test name FIRST &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">tests.RegisterTest</td><td><a href="#m0">getResult</a></td><td rowspan="1">1581841243394</td><td rowspan="1">1</td></tr><tr><th colspan="4">test name FIRST &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.RegisterTest</td><td><a href="#m1">register</a></td><td rowspan="1">1581841243351</td><td rowspan="1">38</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">test name SECOND &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">serviceTests.AddToCartTest</td><td><a href="#m2">addProductToCart</a></td><td rowspan="1">1581841248218</td><td rowspan="1">53</td></tr><tr><th colspan="4">test name SECOND &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">serviceTests.AddToCartTest</td><td><a href="#m3">getProductDetailsService</a></td><td rowspan="1">1581841247489</td><td rowspan="1">57</td></tr><tr class="passedeven"><td><a href="#m4">oAuthTokenService</a></td><td rowspan="1">1581841243351</td><td rowspan="1">1517</td></tr><tr class="passedeven"><td><a href="#m5">searchSofaService</a></td><td rowspan="1">1581841246487</td><td rowspan="1">348</td></tr><tr class="passedeven"><td><a href="#m6">signInUsingService</a></td><td rowspan="1">1581841245587</td><td rowspan="1">212</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">tests.RegisterTest#register</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>test name FIRST</h2><h3 id="m0">tests.RegisterTest#getResult</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name=register status=FAILURE method=RegisterTest.register()[pri:0, instance:tests.RegisterTest@6e0e048a] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at utils.DriverInfo.getResult(DriverInfo.java:82)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 19 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.RegisterTest#register</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException
+	at tests.RegisterTest.register(RegisterTest.java:19)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>test name SECOND</h2><h3 id="m2">serviceTests.AddToCartTest#addProductToCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [201] but found [409]
+	at services.cart.AddToCartRequest.verifyaddToCartResponseStatusCode(AddToCartRequest.java:35)
+	at serviceTests.AddToCartTest.addProductToCart(AddToCartTest.java:68)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">serviceTests.AddToCartTest#getProductDetailsService</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">serviceTests.AddToCartTest#oAuthTokenService</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">serviceTests.AddToCartTest#searchSofaService</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">serviceTests.AddToCartTest#signInUsingService</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

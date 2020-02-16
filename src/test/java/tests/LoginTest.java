@@ -15,21 +15,21 @@ public class LoginTest extends DriverInfo {
 	private static final Logger log = Logger.getLogger(LoginTest.class);
 	LoginPage lp = new LoginPage(DriverInfo.driver);
 
-	@Test(priority = 0, description = "Login details")
+	@Test(description = "Login details")
 	public void login() throws Exception {
 
 		test = extent.createTest("Login Test", "Login details");
 
-		lp.clickOnHomeLink();
-		String expectedTitle = "Welcome";
+		lp.clickOnCloseBtnRegisterPopup();
+		String expectedTitle = "Book My Furniture";
 		Assert.assertTrue(DriverInfo.driver.getTitle().contains(expectedTitle));
 		getScreenshot(DriverInfo.driver, "Title");
-		lp.setUserName("java");
-		getScreenshot(DriverInfo.driver, "Username");
-		lp.setPwd("java");
+		lp.setEmailId(properties.getProperty("email"));
+		getScreenshot(DriverInfo.driver, "Entered email");
+		lp.setPwd(properties.getProperty("password"));
 		getScreenshot(DriverInfo.driver, "Pwd");
 		lp.clickOnSignInLink();
-		getScreenshot(DriverInfo.driver, "After clicking signin");
+		getScreenshot(DriverInfo.driver, "After clicking Signin");
 		log.info("Login successfull");
 	}
 

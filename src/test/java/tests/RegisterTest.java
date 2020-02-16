@@ -13,7 +13,7 @@ public class RegisterTest extends DriverInfo {
 	ITestResult result = null;
 	private static final Logger log = Logger.getLogger(RegisterTest.class);
 
-	@Test(priority = 0, description = "Registering details")
+	@Test(priority = 0, description = "Registering details", groups="FullServiceScenario")
 	public void register() throws Exception {
 		RegisterPage rp = new RegisterPage(DriverInfo.driver);
 		test = extent.createTest("Register Test", "Registering details");

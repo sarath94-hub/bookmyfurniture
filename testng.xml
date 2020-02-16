@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestSuite" thread-count="2" parallel="tests">
-<parameter name="browser" value="chrome"/>
-	<test name="Test">
+	<parameter name="browser" value="chrome" />
+	<test name="test name FIRST">
+		<groups>
+			<run>
+				<include name="FullServiceScenario" />
+			</run>
+		</groups>
 		<classes>
 			<class name="tests.RegisterTest" />
-			<!-- class name="tests.LoginTest" /> -->
-			<!--  class name="serviceTests.SignupTest" /> -->
+		</classes>
+	</test>
+	<test name="test name SECOND">
+		<groups>
+			<run>
+				<include name="FullServiceScenario" />
+			</run>
+		</groups>
+		<classes>
+			<class name="serviceTests.AddToCartTest" />
 		</classes>
 	</test>
 </suite>

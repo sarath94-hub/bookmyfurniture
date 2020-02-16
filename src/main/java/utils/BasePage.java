@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.restassured.RestAssured;
 import io.restassured.specification.RequestSpecification;
+import services.AuthTokenData;
+import services.AuthTokenRequest;
 
 public class BasePage {
 
@@ -124,11 +126,28 @@ public class BasePage {
 	 * @param basepath
 	 * @return
 	 */
-	public static RequestSpecification setBaseURI(String basepath) {
+	public static RequestSpecification setBaseURI(String basepath, String module) {
 		RequestSpecification request = RestAssured.given();
-		request.baseUri("http://okmry52647dns.eastus.cloudapp.azure.com:8089/rest/api/");
-		request.header("Content-Type", "application/json");
-		request.basePath(basepath);
+		request.baseUri("http://okmry52647dns.eastus.cloudapp.azure.com:8089/");
+		switch (module) {
+
+		case "base":
+			request.header("Content-Type", "application/json");
+			request.basePath(basepath);
+			break;
+
+		case "oauth":
+			request.header("Content-Type", "application/x-www-form-urlencoded");
+			request.header("Authorization", "Basic amFtYWxDbGllbnRIZXJlOmphbWFsU2VjcmV0SGVyZQ==");
+			request.basePath(basepath);
+			break;
+			
+		case "signin":
+			request.header("Content-Type", "application/json");
+			request.header("Authorization", AuthTokenData.tokenType + " " + AuthTokenData.accessToken);
+			request.basePath(basepath);
+			break;
+		}
 		return request;
 	}
 

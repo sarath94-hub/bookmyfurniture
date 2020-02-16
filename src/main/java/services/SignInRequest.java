@@ -1,6 +1,7 @@
 package services;
 
 import org.json.simple.JSONObject;
+import org.testng.Assert;
 
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -11,7 +12,7 @@ public class SignInRequest extends BasePage{
 private static RequestSpecification request = null;
 	
 	public static void signinRequest() {		
-		request = setBaseURI("login/signin");
+		request = setBaseURI("rest/api/login/signin", "signin");
 		SignInData.signinRequest = constructSignInRequestParams();
 	}
 	
@@ -29,5 +30,10 @@ private static RequestSpecification request = null;
 		obj.put("emailId", "fsfd6@ff.com");
 		obj.put("password", "Test@1234");
 		return obj;
+	}
+	
+	public static void verifySigninResponse() {
+		int statusCode= SignInData.signinResponse.path("httpStatusCode");
+		Assert.assertEquals(statusCode, 200);
 	}
 }

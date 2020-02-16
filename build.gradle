@@ -27,5 +27,6 @@ compile group: 'io.rest-assured', name: 'rest-assured', version: '3.0.0'
 }
 
 test{
+	systemProperty 'browser', System.getProperty('browser')
 	useTestNG()
 }

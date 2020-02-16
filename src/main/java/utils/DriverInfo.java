@@ -26,7 +26,12 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.CodeLanguage;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
+import services.AuthTokenData;
+import services.SignInData;
 
 public class DriverInfo {
 
@@ -37,7 +42,7 @@ public class DriverInfo {
 	public Properties properties;
 	private static final Logger log = Logger.getLogger(DriverInfo.class);
 
-	@BeforeSuite
+	@BeforeSuite(alwaysRun=true)
 	public void initialize() throws IOException {
 		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "\\extentReport\\testReport.html");
 		extent = new ExtentReports();
@@ -45,7 +50,7 @@ public class DriverInfo {
 		extent.attachReporter(htmlReporter);
 	}
 
-	@BeforeTest
+	@BeforeSuite(alwaysRun=true)
 	@Parameters("browser")
 	public void setup(String browser) throws Exception {
 		if (browser.equalsIgnoreCase("firefox")) {
@@ -70,7 +75,7 @@ public class DriverInfo {
 		log.info(browser + "Browser launched");
 	}
 
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void getResult(ITestResult result) throws Exception {
 		String screenshotPath;
 		if (result.getStatus() == ITestResult.FAILURE) {
@@ -86,6 +91,10 @@ public class DriverInfo {
 			screenshotPath = getScreenshot(driver, result.getName());
 			test.pass("Attached Screenshot", MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
 		}
+	}
+	
+	public void appendReqAndResToExtentReport(String res) {
+		test.log(Status.INFO, "<pre>" + res + "</pre>");
 	}
 
 	public String getScreenshot(WebDriver driver, String screenshotName) {
@@ -103,7 +112,7 @@ public class DriverInfo {
 		return destination;
 	}
 
-	@AfterSuite
+	@AfterSuite(alwaysRun=true)
 	public void TeardownTest() {
 		extent.flush();
 		driver.quit();
